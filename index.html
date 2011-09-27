@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery UI Example Page</title>
+		<link type="text/css" href="css/main.css" rel="stylesheet" />
+		<link type="text/css" href="css/dark-hive/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery-ui-mod.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+
+		<div id="wrap">
+			<h1>PS1 Generator</h1>
+
+
+			<div style="position: relative; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
+
+				<!-- ui-dialog -->
+				<div class="ui-overlay">
+					<div class="ui-widget-overlay"></div>
+					<div class="ui-widget-shadow ui-corner-all" style="width: 502px; height: 152px; position: absolute; left: 50px; top: 30px;"></div>
+				</div>
+
+				<div style="position: absolute; width: 480px; height: 130px;left: 50px; top: 30px; padding: 10px;" class="ui-widget ui-widget-content ui-corner-all">
+					<div class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
+						<p>Foo</p>
+					</div>
+				</div>
+
+			</div>
+
+
+			<h2>Source Elements</h2>
+			<h4>Just drag them to the target area below</h3>
+
+			<ul id="sourceElements" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+				<li class="first element">
+					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Text</a>
+					</h3>
+
+					<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+						<input type="text">
+					</div>
+				</li>
+
+				<li class="element">
+					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Color</a>
+					</h3>
+
+					<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+
+						<select onchange="dataChanged(this)" id="data-0">
+							<option value="white">
+								White
+							</option>
+							<option value="red">
+								Red
+							</option>
+							<option value="green">
+								Green
+							</option>
+							<option value="blue">
+								Blue
+							</option>
+							<option value="cyan">
+								Cyan
+							</option>
+							<option value="magenta">
+								Magenta
+							</option>
+							<option value="yellow">
+								Yellow
+							</option>
+							<option value="black">
+								Black
+							</option>
+						</select>
+
+					</div>
+				</li>
+
+				<li class="last element">
+					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Reset styles</a>
+					</h3>
+
+					<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+
+					</div>
+				</li>
+
+			</ul>
+
+			<div class="clear"></div>
+
+			<h2>Target Area</h2>
+
+			<ul id="targetContainer" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+
+			</ul>
+
+		</div>
+
+		<a href="http://github.com/x3ro"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+	</body>
+</html>
+
+

@@ -1,0 +1,87 @@
+/*
+ * Generic stuff
+ */
+
+body {
+    background: #222;
+	font-family: Helvetica, Arial, Verdana;
+	color: white;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+	overflow: hidden;
+}
+
+#wrap {
+	width: 70%;
+	margin: auto;
+}
+
+
+/*
+ * Source element styling
+ */
+
+#sourceElements {
+	position: relative;
+	margin: 30px 0;
+	height: 200px;
+}
+
+#sourceElements li {
+	width: 30%;
+	margin: auto;
+	z-index: 1001;
+	height: 200px;
+}
+
+#sourceElements li .ui-accordion-content {
+	height: 40px;
+}
+
+#sourceElements li.first,
+#sourceElements li.last {
+	position: absolute;
+}
+
+#sourceElements li.last {
+	right: 0;
+	top: 0;
+}
+
+
+/*
+ * General element styling
+ */
+
+li.element input {
+	width: 180px;
+	background: none;
+	border: 1px solid white;
+	color: white;
+	padding: 4px;
+}
+
+
+/*
+ * Target Area Styling
+ */
+
+#targetContainer {
+	border: 5px dashed grey;
+	padding: 10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#targetContainer li {
+	margin-bottom: 15px;
+}
+
+#targetContainer li:last-child {
+	margin: 0;
+}
+

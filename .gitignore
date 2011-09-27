@@ -1,0 +1,28 @@
+
+
+# Added by gemignore. Snippet 'Global/OSX'
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+# Added by gemignore. Snippet 'Global/Linux'
+.*
+!.gitignore
+*~
+
+# KDE
+.directory
+
+
+# Added by gemignore. Snippet 'Global/Windows'
+# Windows image file caches
+Thumbs.db 
+
+# Folder config file
+Desktop.ini
