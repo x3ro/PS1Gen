@@ -13,7 +13,7 @@ $(function() {
 	new PS1Gen(
 		$( "#targetContainer" ),
 		$( "#wysiwyg" ),
-		null
+		$( "#sourcecode" )
 	);
 
 });
@@ -52,6 +52,7 @@ PS1Gen.prototype = {
 	reset: function() {
 		this.resetStyle();
 		this.wysiwygContainer.children().remove();
+		this.sourceContainer.children().remove();
 	},
 
 	resetStyle: function() {
@@ -72,6 +73,43 @@ PS1Gen.prototype = {
 			self.renderElement(this);
 		});
 
+		this.renderSourceCode();
+
+	},
+
+
+	/*
+	 * Creates the PS1 bash source code and renders it to the source code
+	 * output area.
+	 */
+	renderSourceCode: function() {
+		var sourcecode = "";
+
+		this.resetStyle();
+
+		var currentColor = this.color;
+		var needsColorReset = false;
+
+		this.wysiwygContainer.children().each(function() {
+			var obj = $(this);
+			var color = obj.data('color');
+
+			if(currentColor !== color) {
+				needsColorReset = true;
+				sourcecode += '\\[$(tput setaf ' + color + ')\\]';
+				currentColor = color;
+			}
+
+			sourcecode += obj.data('text');
+		});
+
+		if(needsColorReset) {
+			sourcecode += '\\[$(tput sgr0)\\]';
+		}
+
+		sourcecode = $('<code>export PS1="' + sourcecode + '";</code>');
+
+		this.sourceContainer.append(sourcecode);
 	},
 
 
@@ -156,11 +194,13 @@ PS1Gen.prototype = {
 	***************************************/
 
 	renderTextElement: function(element) {
-		var text =  element.find('input').val();
-		text = this.replaceBashKeywords(text);
+		var origText =  element.find('input').val();
+		var text = this.replaceBashKeywords(origText);
 
 		var obj = $('<code>' + text + '</code>');
 		obj.css('color', this.tputColorToRGB(this.color));
+		obj.data('color', this.color);
+		obj.data('text', origText);
 
 		return obj;
 	},
