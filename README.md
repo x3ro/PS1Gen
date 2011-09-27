@@ -2,12 +2,12 @@
 
 PS1Gen is a small JavaScript tool that allows you to easily generate fancy PS1 command prompts for your favorite Unix Bash shell. A hosted version can be found over at [coding-journal.com](http://ps1gen.coding-journal.com), if you'd like to take it for a spin.
 
-**Note that this is still a non-fully-functional WIP version, so don't expect to much from it yet.**
+**Note that this is still a non-fully-functional WIP version, so don't expect too much from it yet.**
 
 
 # TODO
 
-* Add bash source generation
+* <del>Add bash source generation</del>
 * Add light background mode
 * Make items deletable
 * Fine-tune layout
