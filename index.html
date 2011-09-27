@@ -25,8 +25,8 @@
 				</div>
 
 				<div style="position: absolute; width: 480px; height: 130px;left: 50px; top: 30px; padding: 10px;" class="ui-widget ui-widget-content ui-corner-all">
-					<div class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
-						<p>Foo</p>
+					<div id="wysiwyg" class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
+						<code>Nothing yet</code>
 					</div>
 				</div>
 
@@ -37,7 +37,7 @@
 			<h4>Just drag them to the target area below</h3>
 
 			<ul id="sourceElements" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
-				<li class="first element">
+				<li class="first element textElement">
 					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
 						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Text</a>
 					</h3>
@@ -47,36 +47,36 @@
 					</div>
 				</li>
 
-				<li class="element">
+				<li class="element colorElement">
 					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
 						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Color</a>
 					</h3>
 
 					<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
 
-						<select onchange="dataChanged(this)" id="data-0">
-							<option value="white">
+						<select>
+							<option value="7">
 								White
 							</option>
-							<option value="red">
+							<option value="1">
 								Red
 							</option>
-							<option value="green">
+							<option value="2">
 								Green
 							</option>
-							<option value="blue">
+							<option value="4">
 								Blue
 							</option>
-							<option value="cyan">
+							<option value="6">
 								Cyan
 							</option>
-							<option value="magenta">
+							<option value="5">
 								Magenta
 							</option>
-							<option value="yellow">
+							<option value="3">
 								Yellow
 							</option>
-							<option value="black">
+							<option value="0">
 								Black
 							</option>
 						</select>
@@ -84,7 +84,7 @@
 					</div>
 				</li>
 
-				<li class="last element">
+				<li class="last element resetElement">
 					<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
 						<span class="ui-icon ui-icon-circle-close"></span><a href="#">Reset styles</a>
 					</h3>
