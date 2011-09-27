@@ -81,6 +81,10 @@ PS1Gen.prototype = {
 	renderElement: function(element) {
 		var element = $(element);
 
+		if($.trim(element.text()).length === 0) {
+			return;
+		}
+
 		var content;
 
 		if(element.hasClass('textElement')) {
