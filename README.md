@@ -5,6 +5,15 @@ PS1Gen is a small JavaScript tool that allows you to easily generate fancy PS1 c
 **Note that this is still a non-fully-functional WIP version, so don't expect to much from it yet.**
 
 
+# TODO
+
+* Add bash source generation
+* Add light background mode
+* Make items deletable
+* Fine-tune layout
+* Add Google Analytics
+
+
 # Credits
 
 This tool was inspired the original (?) [Bash $PS1 Generator](http://www.kirsle.net/wizards/ps1.html#help). The reason I rolled out my own one was that it does not allow re-ordering of the items and the colors are very limited.
